@@ -1,4 +1,4 @@
-# Estudos de IA
+# Estudos de IA - Como rodar IA localmente e treinar modelos com seus próprios dados
 
 
 Código implementado para treinar uma IA local usando LLM's e o LM Studio, com dados extraídos da web
