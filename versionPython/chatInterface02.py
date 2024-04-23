@@ -8,12 +8,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 modelEmbedding = "nomic-ai/nomic-embed-text-v1.5-GGUF"
 modelLlm = "TheBloke/Mistral-7B-Instruct-v0.2-GGUF"
+# modelLlm = "TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF"
 client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
 df=pd.read_csv('processed/embeddings.csv', index_col=0)
 df['embeddings'] = df['embeddings'].apply(eval).apply(np.array)
 
-# print(df)
+print(df)
 
 # Função para calcular as distâncias entre os embeddings
 def distances_from_embeddings(query_embedding, embeddings_list):
@@ -80,7 +81,7 @@ def answer_question(
       try:
         # Criar uma conclusão usando a pergunta e o contexto
         response = client.chat.completions.create(
-            model="TheBloke/Mistral-7B-Instruct-v0.2-GGUF",
+            model=modelLlm,
             messages=[
               {"role": "system", "content": f"Responda as perguntas com base no contexto abaixo, inclusive a lingua, e se a pergunta não puder ser respondida diga \"Eu não sei responder isso\"\n\Contexto: {context}\n\n---\n\nPergunta: {question}\nResposta:"},
               {"role": "user", "content": question}

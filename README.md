@@ -39,3 +39,9 @@ Aproveitar do conteúdo disponível no site da empresa para criar um assistente 
 https://github.com/bixtecnologia/semana-dados-assistente
 
 #### <b>OBS1:</b> Utilizei o projeto mencionado acima, originalmente implementado com o ChatGPT da OpenAI, versão paga, e o adaptei para operar com um modelo local. Foi necessário atualizar e substituir algumas bibliotecas para garantir compatibilidade com a API do LM Studio.
+
+
+# Fine tune usando dados próprios
+
+- V1 - Criando um modelo de LLM do zero
+- [V2 - Fine tune com LLAMA 3 e UNSLOTH](https://github.com/unslothai/unsloth)

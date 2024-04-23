@@ -1,2 +1,3 @@
 openai_secret.txt
 /versionJavascript/node_modules/*
+/finetuning/RAW_MODEL/*
